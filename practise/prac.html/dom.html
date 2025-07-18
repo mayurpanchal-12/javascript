@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = {
+        h: 500,
+      };
+
+      let t = JSON.stringify(a);
+      console.log(t);
+      JSON.parse(t);
+      console.log(t);
+
+      localStorage.setItem("ob", t);
+      localStorage.setItem("hello", "mayur");
+      // let r = localStorage.getItem(JSON.parse('hello'));
+      // let r = JSON.parse(localStorage.getItem('hello'))
+      let r = localStorage.getItem('hello');
+      alert(r);
+
+      let d = new Date();
+      alert(d.getFullYear());
+      alert(new Date().getDate())
+
+      console.error(`hqwhuowq`)
+      console.warn(`hqwhuowq`)
+      console.log(`hqwhuowq`);
+      console.clear();
+      localStorage.clear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <button onclick="
+     a.innerText= `${greet(b)}, ${b}`;
+  " 
+
+></button> 
+     <h1></h1>
+  <script>
+  let b = new Date().getHours();
+  
+  let a = document.querySelector(`h1`);
+    function greet(g=9){
+     
+      if(g>6 && g<12){
+      return   `good morning`
+   }else if(g>12  && g<18){
+    return `good afternoon`
+   }else{
+    return `good`
+   };
+ 
+
+    };
+    
+console.log(greet(b))
+
+  </script>
+</body>
+</html>

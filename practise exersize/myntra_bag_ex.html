@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <style>
+    *{
+      padding: 0%;
+      margin: 0%;
+      background-color: #98f550;
+    }
+    .div{
+      height: 80vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .button{
+      color: palegreen;
+      padding: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 45px;
+      font-weight: 400;
+      font-family: fantasy;
+      background-color: #f550df;
+      border: rgb(145,200,230,0.4) outset 2px;
+      border-radius: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  myntra bag   exersize
+  </header>
+  <main>
+    <div class="div">
+    <button class="button" id="a" onclick="cart ++;
+     document.querySelector(`#card`)
+     .innerText = `your bag has  ${cart }items` ">add to bag</button>
+    <button class="button" id="b" onclick="cart= cart-1;
+    document.querySelector(`#card`)
+    .innerText = `your bag has  ${cart }items` " style="background-color: antiquewhite; color: tomato;"> move to wishlist</button>
+    <button class="button" id="c" onclick="cart= cart+2;
+    document.querySelector(`#card`)
+    .innerText = `your bag has  ${cart }items` "> add 1+1 sell items</button>
+    </div>
+    <h1 id="card"> your bag has 0 items</h1>
+  </main>
+  <script>
+
+     let cart = 0;
+    //  document.querySelector(`#card`)
+    //  .innerText = `your bag has  ${cart }items`
+
+
+  </script>
+</body>
+</html>

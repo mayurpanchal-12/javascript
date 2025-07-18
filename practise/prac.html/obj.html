@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      let h = document.querySelector(`h1`);
+      let r = 600;
+      let project = {
+        pricee: 400,
+        'size': 34,
+        name: "shirt",
+        rating: {
+          star: 4,
+          noOfReview: 400,
+        },
+           r,
+        price () {
+          console.log(`price is ${this.pricee}`);
+        },
+      };
+      h.innerText = JSON.stringify(project);
+      h.innerText = project.name;
+      h.innerText= project[`size`]
+ project.price();
+ h.innerText= project.r;
+
+ let d = project.name;
+ h.innerText= d;
+
+ let {pricee}= project;
+ h.innerText= pricee;
+ delete project.r;
+ delete project[`name`];
+ h.innerText = JSON.stringify(project);
+
+ let f = 9;
+ let g = f;
+ f= 8;
+ alert(f);
+ alert(g)
+
+ let hello = project;
+ console.log(hello.size);
+ console.log(project.size);
+ hello.size= 67;
+ console.log(project.size);
+ console.log(hello===project);
+
+ let ra = {price:500};
+ let fa = { price:500};
+ console.log(ra===fa);
+
+ console.log('hello '.length);
+ console.log("good".toUpperCase());
+ console.log("fr".replace('f','r'));
+ alert(JSON.stringify(project.pricee));
+ let u={
+  a:'mayur'
+ }
+ let m = JSON.stringify(u.a);
+ alert(m);
+ let s = JSON.parse(m);
+ alert(s)
+ </script>
+  </body>
+</html>

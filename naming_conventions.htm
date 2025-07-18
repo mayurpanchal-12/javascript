@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="head.css">
+  </head>
+  <body>
+    <header>
+      <span id="a"> naming-conventions</span>
+    </header>
+    <main style="line-height: 5;">
+      <div id="camelCase"></div>
+      <div id="snake_case"> </div>
+    </main>
+    <script>
+      //camelCase
+      let myName = "mayur panchal";
+      document.querySelector(`#camelCase`)
+      .innerText=(`this is defined in myname variable whic is camelCase and the string is ${myName}`);
+      // snake_case
+      let my_name = "mayur panchal";
+      document.getElementById(`snake_case`)
+      .innerText=( `this defined in variable which is snake_case and its value is  = ${my_name}`)
+
+      console.log(`my_name` + `myName`);
+    </script>
+  </body>
+</html>

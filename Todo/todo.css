@@ -1,0 +1,48 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+body{
+  font-style: oblique;
+}
+
+#heading{
+  line-height: 87px;
+  text-align: center;
+  text-decoration: overline;
+  text-decoration-color: rgb(230,230,100);
+  text-transform: capitalize;
+  font-size:45px;
+  font-weight: 400;
+  font-style: oblique;
+}
+.todo-container,.grid{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 140px;
+  padding-left: 22px;
+  row-gap: 15px;
+  margin-top: 15px;
+  align-items: center;
+}
+#date,#text{
+font-size: 15px;
+padding: 10px 5px;
+
+}
+.delete{
+  background-color: rgba(186, 29, 29, 0.996);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+.add{
+  background-color: rgba(29, 227, 105, 0.996);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0px;
+  cursor: pointer;
+}

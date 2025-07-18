@@ -1,0 +1,25 @@
+*{
+  margin: 0%;
+  padding: 0%;
+ height: 300px;
+}
+
+.z{
+  height: 10vh;
+  width: 10vw;
+  border: 10px red solid ;
+  margin: 7px;
+  border-radius: 8px;
+  background-color: rgb(230,145,200);
+  color: yellow;
+}
+article{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#a{
+  /* align-self: start; */
+  flex-shrink: 2;
+}

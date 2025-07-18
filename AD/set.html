@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  let message = () =>{console.log("hello")}
+  let intervalid=setTimeout(message,5000);
+  let i=setInterval(message,1000);
+
+  clearTimeout(intervalid)
+   clearInterval(i)
+
+  let mixuse=  ()=>console.log( "good morning")
+    mixuse();
+          let intervval = setInterval(mixuse,2000);   
+
+
+       let newm =  setTimeout(() =>clearInterval(intervval),11000)
+        // clearTimeout(newm)
+       
+
+
+  </script>
+  
+</body>
+</html>

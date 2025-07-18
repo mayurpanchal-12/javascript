@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let ppromise = new Promise((resolve, reject)=>{
+       
+            setTimeout(()=> console.log("done") , 3000)
+            resolve()
+           })
+
+    ppromise.then((e)=>{
+      console.log("yeee", e)
+    })
+
+    new Promise((resolove, reject)=>{
+            console.log("2nd ");
+            resolove(a=[3,6,9])
+    }).then((e)=>{
+      console.log(e)
+    })
+
+
+
+  </script>
+  
+</body>
+</html>

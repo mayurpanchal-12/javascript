@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="a" onclick="
+  let random=Math.random()*3; let com;let result;
+  if(random>0 && random<=1)
+  {
+    com =`bat`
+  }else if(random>1 && random <=2)
+  {
+    com=`ball`
+  }else{
+    com=`stump`
+  }
+  if(com==`ball`){
+         result=`bat is winner`
+  }else if(com==`stump`)
+  {
+    result=`computer choice that is stumps is winner`
+  }else{
+    result=`tie`
+  }
+  alert(`computer choice is:-${com} and random is ${random}\n ${result}`)
+  "
+  
+  >gtregfdefd</button>
+  <button id="b" onclick=" let ran = Math.random()*3; let resul;
+  if(ran>0 && ran<=1)
+  {
+       resul=`bat`
+  }else if(ran>1 && ran <=2)
+  {
+    resul=`tie`
+  }else{
+    resul=`ball`
+  }
+    alert(`computer chioce ${ran} and winner is ${resul}`)
+  ">ball</button>
+    <button id="c" onclick="let rand= Math.random()*3; let winner;
+    if(rand>0 && rand<=1)
+    {
+      winner=`stump`
+    }else if(rand>1 && rand<=2){
+      winner = `ball`
+    }else{
+      winner=`tie`
+    }
+    alert(`you chioose stump \n random number is ${rand}\n and winner is ${winner}`)">
+    stump</button>
+</body>
+</html>

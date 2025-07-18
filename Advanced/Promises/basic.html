@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //basic creation of promise 
+    // no need to store in variable
+    const promiseCreation =  new Promise(function(resolve, reject){
+          setTimeout(()=>{ console.log("async task is done"), resolve()}, 5000)
+
+     })
+//promise consumtion;consume; whatto do after promise complete
+     promiseCreation.then(function(){
+      console.log("promise consumed")
+     })
+
+// without stpring promise in varable
+  new Promise(function(resolve, reject){
+      setTimeout(()=>{
+        console.log("async second task is done")
+      resolve()}, 7000)
+      
+  }).then(function(){
+    console.log("promised consumed (second)")
+  })
+
+// how to take data which comes fom resolve() and show that in then
+    const thirdpromise = new Promise (function(resolve, reject){
+      setTimeout(()=>{
+        "3rd promise ";
+      resolve( a = [1,2,3,4])},
+      3000)
+    })
+
+  thirdpromise.then(function(promiseValue){
+  console.log(promiseValue)
+  })
+
+  // 
+      
+  </script>
+</body>
+</html>

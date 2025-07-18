@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  |<style>
+    #main{
+      background-color: red;
+      height: 98vh; width: 100vw;
+    }
+    #one{background-color: green; height: 30vh; width: 40vw;}
+    #two{background-color: blueviolet; height: 30vh; width: 40vw;}
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="one"></div>
+    <div id="two"></div>
+  </div>
+  <a href=" a.kdjw" id="link">google</a>
+  <input type=" text" placeholder="typeeeeee" id="text"> 
+  <script>
+    document.querySelector('#main').addEventListener('click', (e)=>{
+      console.log("main is clicked"), e.stopPropagation()}, false)
+    document.getElementById('one').addEventListener('click', (e)=>{
+      console .log("one is clicked"), e.stopPropagation()} , false)
+    document.querySelector('#two').addEventListener('click', (e)=>{
+      console.log("second is clicked"), e.stopPropagation()}, false)
+
+       
+    document.getElementById('link').addEventListener('click', (e)=>{
+      console.log("link"), e.preventDefault() 
+    })
+       
+    document.getElementById('text').addEventListener('keydown', (e)=>{
+        console.log(e.keyCode);
+        console.log(e.key);
+    })
+  </script>
+</body>
+</html>

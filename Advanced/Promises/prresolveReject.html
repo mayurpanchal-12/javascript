@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  let promise = new Promise((resolve, reject)=>{
+         let value= false;
+       if(!value ){
+        resolve({nanme:"mayurpanchal", age:21})
+       }else{
+        reject(console.log("somthing went wrong"))
+       }
+  })
+  // promise.then((e)=>{
+  //   console.log(e)
+  // })
+
+    //  let neee= promise.then((e)=>{
+    //        console.log(e)
+    //      return e.age
+    //  })
+    //  console.log(neee)
+
+    promise.then((e)=>{
+      console.log(e)
+  return e.age
+    }).then((e)=>{
+      console.log(e);
+      return e+6;
+    }).then((e)=>{
+      console.log(e)
+    }).catch((e)=>{
+      console.log(e)
+    }).finally((e)=>{
+ console.log(e, "happened")
+    })
+</script>  
+</body>
+</html>

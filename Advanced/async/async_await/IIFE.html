@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //iief= immediataely invoked function expression
+    // iief function that is executed immediately after it is defined;
+    // it is function that can be nameless or named;
+    // it is used to avoid polluting the global scope with variables and functions;
+    // these functions can not called again even they are given name;
+  function a(id){
+    return new Promise((resolve, reject)=>{
+      setTimeout(() => {
+        console.log("data", id);
+        resolve()
+      }, 3000);
+    })
+  };
+
+  // iife is used to call async function that calls await;
+  //we are using iife to avoid calling async function that calls await;
+
+            (async()=>{
+               await a(3);
+               await a(6);
+               await a(9)
+            })();
+
+            // iife can be written in different ways;
+            // 1. function expression
+            // 2. arrow function expression
+            // 3. async function expression
+            // 4. async arrow function expression
+
+     ( function (params) {
+        console.log("this a type of iife")    
+     } ) ();
+
+   
+     (()=>{
+         console.log("second type of iife") 
+     })();
+
+      ( async function(){
+         console.log("third writting style of iife")
+      })();
+
+      (async()=>{
+       console.log("type of writting iife")
+      })();
+
+      // (()=>console.log("good morning"))()...making short form
+
+
+
+
+  /**
+     async function call(){
+        await a(3);
+        await a(6);
+        await a(9)
+     }
+
+     call()  
+     to avoid this type where we need to call async function that calls await ;
+     we use IIFE **/
+
+  </script>
+  
+</body>
+</html>

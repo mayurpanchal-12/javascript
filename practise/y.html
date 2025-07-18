@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="y.css">
+</head>
+<body>
+  <header>
+    practice
+  </header>
+  <main>
+    <button id="a" onclick=" z++;
+      document.querySelector(`#d`).innerText = `your bag has ${z} items`"> add to cart</button>
+
+    <button id="b" onclick="z--;
+    document.querySelector(`#d`).innerText = `your bag has ${z} items`"> remove from bag</button>
+    <button id="c" onclick="z+=2;
+    document.querySelector(`#d`).innerText = `${x+z}`"> add 1+1 sell items</button>
+    <!-- <button > your bag has </button> -->
+     <div id="d"></div>
+  </main>
+  <script>
+    let z = 0;
+    let x = `your bag has`
+  </script>
+  
+</body>
+</html>

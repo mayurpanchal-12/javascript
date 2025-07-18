@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .increase {
+      width: 100px;
+      height: 50px;
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px;
+    }
+    .in{
+      height: 100px;
+     background-color: sandybrown;      
+    }
+  </style>
+</head>
+<body>
+  <button class="increase">Increase</button>
+  <script>
+    document.querySelector('.increase').addEventListener('click', ()=>{
+       setTimeout(resize, 3000)
+    });
+     function resize() {
+        const bton = document.querySelector('.increase');
+        bton.classList.add('in');
+      };
+  </script>
+  
+</body>
+</html>

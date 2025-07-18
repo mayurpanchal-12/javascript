@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .js-odd {
+        background-color: red;
+      }
+      .js-even {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="p()">click me</button>
+    <script>
+      let press = 0;
+      let button = document.querySelector(`button`);
+      function p() {
+        button.innerText = `${press}`;
+        press++;
+
+        if (press % 2 === 0) {
+          button.classList.remove(`js-odd`);
+          button.classList.add(`js-even`);
+        } else {
+          button.classList.remove(`js-even`);
+          button.classList.add(`js-odd`);
+        }
+      };
+      p()
+      document.title=`hdoq`
+    </script>
+  </body>
+</html>

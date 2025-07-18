@@ -1,0 +1,31 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  background-color: #19d2f8;
+}
+header {
+  background-color: #fb4df8;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 45px;
+  font-weight: 400;
+  font-family:cursive;
+  text-decoration-color: #1ff2f2;
+  height: 26vh;
+  width: 100%;
+  border: 10px ridge #4ef407;
+  border-bottom: 10px ridge #e8fc37;
+  border-radius: 77px;
+  box-sizing: border-box;
+  position: relative;
+  top: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+#a{
+  color: #7e1df4;
+  background-color: #fb4df8;
+   
+}

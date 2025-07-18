@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        // let database = (dataid)=>{
+
+
+        //    setTimeout(()=>{ console.log("data", dataid), 2000})
+        // }
+
+
+        // database(1)
+        // database(2)
+        // database(3)
+
+
+        /** 2nd section **/
+// let database = (dataid, nextdata)=>{
+//            setTimeout(()=>{ 
+//             console.log("data", dataid)
+//                nextdata()
+//             , 2000})
+//         }
+
+//   database(1, ()=>{
+//      database(2)   // if i want to do database 3 then in main fn there ie nothing after nextdata 
+//      // so check below section
+//   })
+
+
+/** 3rd section */
+
+         let getdata = (dataid, nextdata)=>{
+           setTimeout(()=>{ 
+            console.log("data", dataid)
+            if(nextdata){
+               nextdata()
+                
+            }}, 2000)
+        }
+
+        // getdata(1, ()=>{
+        //    getdata(2,()=>{
+        //     getdata(3, ()=>{
+        //       getdata(4)
+        //     })
+        //    } )
+        // })
+
+        // this is callback hell because it difficult to understand and manage ; nested callback 
+                getdata(1, ()=>{
+                console.log("getting data 2")
+                  getdata(2,()=>{
+                console.log("getting data 3")
+            getdata(3, ()=>{
+                console.log("getting data 4")
+
+              getdata(4)
+            })
+           } )
+        })
+   
+
+
+
+  </script>
+  
+</body>
+</html>

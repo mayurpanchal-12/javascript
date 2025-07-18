@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <style>
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+    }
+    #b1,#b2,#b3{
+      height: 20vh;
+      width: 29vw;
+      margin: 10px;
+      border: 2px ridge #4afdb2;
+      border-radius: 3px;
+      transition-property: all;
+      transition-duration: 5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0ms;
+      background-color: tomato;
+    }
+  #b3:hover{
+      height: 30vh;
+      
+    }
+    #b2:hover{
+      height: 30vh;
+    }
+    #b1:hover{
+      height: 30vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    bat ball stump game
+  </header>
+  <main>
+    <button id="b1" onclick="
+    
+         let functionReturns;
+         let result;
+      if(code() === `ball`)
+      {
+       result=`bat is winner`;
+       functionReturns = `ball`;
+      }else if(code() === `stump`)
+      {
+        result=`computer is winner`
+        functionReturns = `stump`;
+      }else
+      {
+        result=` it's tie`
+        functionReturns = `bat`;
+      }
+      alert(`you have chossen bat.\n computer choice is ${functionReturns} \n ${result}  `)
+       ">bat</button>
+
+
+                    <button id="b2" onclick="
+                    let coom;
+                    let laast;
+                      if(code() ===`bat`)
+                      {
+                         laast = `bat is winner`;
+                         coom =  `bat`
+                      }else if (code() === `ball`)
+                         {
+                          laast = `tie`;
+                          coom = `ball`
+                         }else{
+                          laast = `ball winn`
+                          coom = `stump` 
+                                  }
+                                 alert(`your choice is ball, \n , and  ${laast } \n com choose ${coom} `);
+                                   "> ball</button>
+
+    <button id="b3" onclick="
+    let last;
+    let com;
+    if(code()=== `bat`){
+      last = `stump is winner`
+      com = `bat`
+    }else if (code() === `ball`){
+      last =`stump is loser`
+      com = `ball`
+    }else{
+      last = `it's tie`
+      com = `stump`
+    } 
+    alert(` your choice is stump \n com choose ${ com} \n ${last}`)
+    "> stump</button>
+  </main>
+
+ <script>
+  //  let computer;
+function code(){
+
+    let randomnumber =Math.random()*3;
+     
+      if(randomnumber >0 && randomnumber<=1)
+      {
+       return  `bat`;
+        // console.log(`computerchoice is bat`)
+      }else if(randomnumber > 1 && randomnumber<=2)
+      {
+        return  `ball`
+      // console.log(`computerchoice is ball`)
+
+      } else
+      {
+         return `stump`;
+        // console.log(`computerchoice is stump`)
+      }  
+}
+  </script>
+</body>
+</html>

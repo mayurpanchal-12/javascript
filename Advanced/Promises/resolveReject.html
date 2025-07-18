@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <script>
+// here we learn entire concept of reject , resolve toghether with finally
+
+const promise = new Promise( function(resolve, reject){
+    let error = false;
+    if(!error){
+      resolve({name:"mayur" , age:22})
+    } else{
+      reject('Error alay')
+    }
+
+})
+
+// below first i took entire resolove value (i need to cahne let error = false ) 
+// then i extract use.user means from entire obkject i only took usename and try to print 
+// using passing to the variable but it gives false 
+/** 
+let username= promise.then((user)=>{
+
+  console.log(user)
+ return user.name
+})
+
+console.log (username) 
+**/
+
+/** this is for above ;Why is console.log(username) showing Promise { <pending> }?
+Because .then() does not return the actual value (like user.name) immediately. It returns another Promise that resolves in the future to user.name.
+
+So username is not a string — it's a Promise. **/
+     promise.then( (user)=>{
+        console.log(user)
+        return user.name
+     }).then((username)=>{
+             console.log(username)
+     }). catch((err)=>{
+      console.log(err)
+     }) .finally(()=>{
+console.log("      promise complete")
+     })
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// here we re going to make comparison of all three callback hell , promis chain and async- await
+
+//1 -callback hell
+   function a(id, nextid){
+     setTimeout(()=>{
+      console.log("callback hell for ", id);
+      if(nextid){
+        nextid()
+      }
+     }, 1000)
+   }
+
+ a(2, ()=>{
+      a(4, ()=>{
+        a(6, ()=>{
+          a(8, ()=>{
+            a(10)
+          })
+        })
+      })
+    })
+    
+// promise chain
+
+
+     function b(id){
+      return new Promise((resolve, reject)=>{
+         setTimeout(()=>{
+          console.log("promise chain for", id)
+          resolve()
+         }, 2000)
+      })
+     }
+
+
+
+   
+     b(2)
+     .then(()=>{ return b(4)})
+     .then(()=>{return b(6)})
+     .then(()=>{return b(8)})
+     .then(()=>{return b(10)})
+     .then(()=>{ console.log("promise chain complete")})
+    
+
+
+     // async-await
+  function c(id){
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      console.log("data", id)
+      resolve()
+    }, 3000)
+  })
+  }
+
+  async function d(params) {
+  console.log("getting data first")
+     await c(2);
+  console.log("getting data second")
+     await c(4);
+  console.log("getting data third")
+     await c(6);
+  console.log("getting data fourth")
+     await c(8);
+  console.log("getting data fifth")
+     await c(10);
+  }
+
+  d()
+
+  </script>
+  
+</body>
+</html>

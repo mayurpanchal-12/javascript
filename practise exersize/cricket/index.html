@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <style>
+    .butt{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36vh;
+    }
+    #b1,#b2,#b3{
+      height: 20vh;
+      width: 29vw;
+      margin: 10px;
+      border: 2px ridge #4afdb2;
+      border-radius: 3px;
+      transition-property: all;
+      transition-duration: 5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0ms;
+      background-color: tomato;
+    }
+  #b3:hover{
+      height: 30vh;
+      
+    }
+    #b2:hover{
+      height: 30vh;
+    }
+    #b1:hover{
+      height: 30vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    bat ball stump game
+  </header>
+  <main>
+    <div class="butt">
+    <button id="b1" onclick="
+      code();
+
+         let result;
+      if(computer === `ball`)
+      {
+       result=`bat is winner`;
+      }else if(computer === `stump`)
+      {
+        result=`computer is winner`
+      }else
+      {
+        result=` it's tie`
+      }
+      alert(`you have chossen bat.\n computer choice is ${computer} \n ${result}  `)
+       ">bat</button>
+
+
+                    <button id="b2" onclick="
+                     code();
+                      let win;
+                      if(computer ===`bat`)
+                      {
+                        win = `computer choice is winner which is ${computer}`
+                       }else if (computer === `ball`)
+                         {
+                            win = `tie ,computer also choice ${computer}`
+                         }else{
+                              win = `ball is wiiner computer choice is ${computer}`
+                                  }
+                                 alert(`your choice is ball, \n , and  ${win} `);
+                                   "> ball</button>
+
+    <button id="b3" onclick="
+    code();
+    let last;
+    if(computer === `bat`){
+      last = `stump is winner`
+    }else if (computer === `ball`){
+      last =`ball is winner`
+    }else{
+      last = `it's tie`
+    } 
+    alert(` your choice is stump \n computer choice is ${computer} \n ${last}`)
+    "> stump</button>
+    </div>
+    
+  </main>
+
+ <script>
+   let computer;
+function code(){
+
+    let randomnumber =Math.random()*3;
+     
+      if(randomnumber >0 && randomnumber<=1)
+      {
+       computer = `bat`;
+        // console.log(`computerchoice is bat`)
+      }else if(randomnumber > 1 && randomnumber<=2)
+      {
+        computer = `ball`
+      // console.log(`computerchoice is ball`)
+
+      } else
+      {
+         computer = `stump`;
+        // console.log(`computerchoice is stump`)
+      }  
+}
+  </script>
+</body>
+</html>

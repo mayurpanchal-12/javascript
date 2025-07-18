@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.js-even{
+  background-color: red;
+}
+.js-odd{
+  background-color: aquamarine;
+}
+
+  </style>
+</head>
+<body>
+  <button onclick=" c() 
+    "></button>
+    <button id="reset" onclick="reset()"> reset</button>
+  <script>
+    let r = localStorage.getItem('press');
+    let f = JSON.parse(r)
+    let press = f || 0;
+    let x = document.querySelector(`button`)
+ let button = document.querySelector(`button`)
+ function c(){
+
+ 
+  x.innerText=`${press}`
+  localStorage.setItem('press',JSON.stringify(press));
+  press++;
+
+  if (press %2 ==0) {
+    x.classList.remove(`js-odd`);
+    x.classList.add(`js-even`);
+  }else{
+        x.classList.remove(`js-even`);
+        x.classList.add(`js-odd`);
+
+  }
+}
+c()
+function reset(){
+   localStorage.clear();
+  let t =  localStorage.getItem('press');
+  let m= JSON.stringify(t);
+  t===0;
+  x.innerText= `${t}`
+
+
+}
+  </script>
+</body>
+</html>

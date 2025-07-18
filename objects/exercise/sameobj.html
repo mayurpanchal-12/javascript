@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a ={
+      name:'shirt',
+      size:45,
+      price:200,
+    };
+    let b = a;
+     let f = checkSimilarity(a,b);
+     alert(f)
+       
+    function checkSimilarity(pro1 , pro2) {
+      if (typeof pro1 != typeof pro2) { //check if both are objects
+        return false;
+      }else if ( pro1== pro2) { //  check if both references are same
+        if (pro1.name === pro2.name && pro1.size=== pro2.size && pro1.price === pro2.price) {
+          // check their key-value is same or not 
+          return true
+        }
+      }else{
+        return false;
+      }
+    }
+  </script>
+  
+</body>
+</html>

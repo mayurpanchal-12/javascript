@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     let r = JSON.stringify('hello');
+     alert(r);
+     let a = 'good morning'
+     localStorage.setItem('message', JSON.stringify(a));
+     localStorage.setItem('name', "mayur");
+     let p = localStorage.getItem('name')
+     console.log(p);
+     let y = JSON.parse(localStorage.getItem('message'));
+     console.log(y);
+     localStorage.removeItem('message');
+     localStorage.clear();
+     let f = new Date ();
+     alert(f.getMinutes())
+
+  </script>
+  
+</body>
+</html>

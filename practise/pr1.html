@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #r{
+      background-color: gold;
+      border-radius: 10px;
+    }
+    #s{
+      border-radius: 3px;
+      text-align: center;
+      padding: 10px;
+    }
+    #m{
+      display: inline-block;
+    }
+    #b{
+      height: 40vh;
+      width:40vw;
+      color: red;
+      background-color: yellow;
+      border:5px solid greenyellow;
+      border-radius: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 45px;
+      font-weight: 400;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+      transition-property: all;
+      transition-duration: 5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
+    }
+    #b:active{
+      transform: rotateX(45deg);
+    }
+    #main{
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="main">
+    <button id="b" onclick="alert('hello')">click</button>
+    </div>
+    <div id="m">
+      <button id="r">add to bag</button>
+      <button id="s"> ishlist</button>
+    </div>
+  </main>
+  <script>
+    alert('hello')
+  </script>
+</body>
+</html>

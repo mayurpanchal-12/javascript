@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let  a =[1,2,45, 3, 9 , 6 ,11 ,12]
+     let anotherArr=  a.filter((num,index)=>{
+        if (num%2 ===1) {
+          return true
+        }else{
+          return false
+        }
+       });
+    let b = [2,4,6,8, 11];
+    let newa = b.filter((num)=>{
+        if(num%2 != 0){
+          return true
+        }else{
+          return false
+        }
+})
+  alert(newa)
+
+//short of above is below
+
+        // let anotherArr=  a.filter((num,index)=>{
+        //   return num % 2 ===1
+        // });
+
+//short of above is below
+
+      //   let anotherArr=  a.filter((num,index)=>  num % 2 ===1) ;
+
+   console.log(anotherArr)
+
+</script>
+</body>
+</html>

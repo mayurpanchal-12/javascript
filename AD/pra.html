@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  #main{
+    background-color: red; height: 100vh; width: 100vw;
+  }
+  #first{background-color: green; height: 40vh; width: 30vw;}
+  #second{background-color: rgb(39, 9, 229); height: 40vh; width: 30vw;}
+</style>
+</head>
+<body>
+  <div id="main">
+       <div id="first"></div>
+       <div id="second"></div>
+       <a href="hj">google</a>
+  </div>
+  <input type="text" id="text" placeholder="type">
+  <input type="text" id="t" placeholder="keyup">
+  <script>
+         document.getElementById('main').addEventListener('click', ()=>{
+          console.log("main id clicked")
+         }, false)
+        document.getElementById('first').addEventListener('click', ()=>{
+           console.log("first box clicked")
+        }, false);
+        document.getElementById('second').addEventListener('click',(e)=>{
+          console.log("second box has been clicked")
+        e.stopPropagation()}, false)
+        document.querySelector('a').addEventListener('click', (e)=>{
+          console.log('link clicked'); e.preventDefault()
+        })
+        document.getElementById('text').addEventListener('keydown', (e)=>{
+             console.log("a", e.code, e.key , e)
+        })
+        document.getElementById('t').addEventListener('keyup', (e)=>{
+          console.log(e.code, e.key)
+        })
+  </script>
+  
+</body>
+</html>

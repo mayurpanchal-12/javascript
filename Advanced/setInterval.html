@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let message = ()=> console.log("good morning")
+
+    let intervalid= setInterval(message,1000)
+    clearInterval(intervalid)
+    console.log(intervalid)
+
+    let mixuse = () => console.log("mix use of setTimeout and setInterval")
+    let intervalid2 = setInterval(mixuse, 1000)
+
+    setTimeout((() =>clearInterval(intervalid2)), 10000 )
+  </script>
+  
+</body>
+</html>

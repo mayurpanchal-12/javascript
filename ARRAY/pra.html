@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+let a = [12,3,null , true , {name:'mayur'}];
+          console.log(a);
+          console.log(a[1]);
+          console.log(a.length);
+          console.log(typeof a);
+          console.log(Array.isArray(a));
+  a.pop();
+  a.push(5);
+  a.shift();
+  a.unshift(21);
+             console.log(a);
+  let b =a.valueOf();
+             console.log(b);
+  let c = a.toString();
+             console.log(c);
+  a.splice(2, 2);
+              console.log(a);
+  a.push('z');
+  a.push('a');
+  a.sort();
+              console.log(a)
+
+              let z = a; //practicing reference
+  z.pop();
+  a.push('t');
+               console.log(a);
+               console.log(z);
+               console.log(a==z);
+               console.log(a===z);
+  let [f,g,k,l]= a;
+                console.log(g);
+                console.log(l);
+    
+  let e = [ 1,2,3]; //practicing array uses references 
+  let r = [1,2,3];
+                 console.log(e==r);
+                 console.log(e===r);
+
+
+  </script>
+  
+</body>
+</html>

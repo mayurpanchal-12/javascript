@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise Chain</title>
+</head>
+<body>
+  <script>
+    // A function that returns a Promise
+    function dataPromise(id) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log("data", id);
+          resolve(); // Continue to next
+        }, 2000);
+      });
+    }
+
+    // Promise chaining
+    dataPromise(6)
+      .then(() => dataPromise(8))
+      .then(() => dataPromise(9));
+  </script>
+</body>
+</html>

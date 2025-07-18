@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="b++;
+  document.querySelector(`#o`).innerText=`your cart has ${b} items`">add to bag</button>
+  <button onclick="if(b>=0){//i had to use while loop to do opr below zero
+    --b;
+  };
+  if(b<=0)
+{
+  document.querySelector(`#o`).innerText=`your cart is empty;`
+}
+else{
+  document.querySelector(`#o`).innerText=`your cart has ${b} items`
+}
+  ">move to wishlist</button>
+  <button onclick="b+=2;
+  document.querySelector(`#o`).innerText=`your cart has ${b} items`">1+1sell items</button>
+  <h1 id="o"></h1>
+<script>
+  let b=0;
+</script>  
+</body>
+
+</html>

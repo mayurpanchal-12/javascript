@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        let a = JSON.stringify(`hdowhdowd`);
+        console.log(a);
+        let r = (JSON.stringify(`fid`));
+        console.log(r)
+        let d = JSON.parse(r)
+   console.log(d);
+
+   localStorage.setItem('name', 'mayur');
+   localStorage.setItem("timepss", a);
+   let f = localStorage.getItem('name')
+   console.log(f);
+   localStorage.removeItem('name');
+   localStorage.clear();
+
+   let g = new Date();
+   alert(g.getFullYear());
+   document.title= 'hello';
+
+
+
+  </script>
+</body>
+</html>

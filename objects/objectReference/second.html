@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+          let x = {
+            price:500,
+          };
+          let y = x; //in object it copies references /root/adress
+          console.log(x,y); //bith values will be same 
+          x.price=600;
+          console.log(x,y) /* if one change then other is also chnage because it use references
+                        now values of x,y is 600 */
+  y.price= 800;   /* now values of both will be 800 */
+  console.log(x,y);
+
+  console.log(x==y)  // ans will be true there is only one reference 
+  let a = {name:'hii'}
+  let b = {name:'hii'}
+  console.log(a===b)  // ans will be false ; beacause it checks references rather than values
+  console.log(a==b) // ans also false because it checks references 
+
+  </script>
+</body>
+</html>

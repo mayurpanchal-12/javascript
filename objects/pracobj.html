@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let product={
+          company:`coty`,
+          size:100,
+           name:`shirt`,
+    };
+    console.log(product);
+console.log(product.company);
+console.log(product.name);
+console.log(product.size);
+console.log(typeof product);
+
+   product.company=`grass`;
+   product.size=200;
+   product.name= `bag`;
+   console.log(product);
+   delete product.size;
+   console.log(product)
+   product.size = 200;
+   console.log(product[`name`]);
+   console.log(product[`size`]);
+   console.log(product[`company`]);
+
+   let shirt={
+    'si-ze':100,
+    'pr#ce':400
+   }
+   console.log(shirt)
+
+    
+
+  </script>
+</body>
+</html>

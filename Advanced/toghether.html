@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// here we are going to make combination  of all three callback hell, promise chain and async-await
+
+//1 -callback hell
+function callback(){
+  return new Promise((resolve)=>{
+   function a(id, nextid){
+     setTimeout(()=>{
+      console.log("callback hell for ", id);
+      if(nextid){
+        nextid()
+      }
+     }, 1000)
+   }
+  a(2, ()=>{
+        a(4, ()=>{
+          a(6, ()=>{
+            a(8, ()=>{
+              a(10, ()=>{
+                resolve()
+              })
+            })
+          })
+        })
+      })
+    })
+  }
+// promise chain
+     function b(id){
+      return new Promise((resolve, reject)=>{
+         setTimeout(()=>{
+          console.log("promise chain for", id)
+          resolve()
+         }, 2000)
+      })
+     };
+
+     function promischain(){
+      return b(2).then(()=>b(4))
+                 .then(()=>b(6))
+                 .then(()=>b(8))
+                 .then(()=>b(10))
+                 .then(()=>console.log("promise chain complete"))    
+         }
+      
+
+// async-await
+
+ function c(id) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          console.log("Async-Await for", id);
+          resolve();
+        }, 3000);
+      });
+    }     
+  async function async_await_chain(){
+      await c(2);
+      await c(4);
+      await c(6);
+      await c(8);
+      await c(10);
+      console.log("async-await completed")
+  }
+
+  async function runinorder(){
+       console.log("running callback hell")
+       await callback();
+       console.log("running promise chain");
+       await promischain();
+       console.log("running async await ")
+       await async_await_chain();
+       console.log("all done")
+
+  }
+    runinorder();
+
+  </script>
+  
+</body>
+</html>

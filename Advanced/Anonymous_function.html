@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  
+  <script>      
+  let sum =  function(num1, num2){
+          return num1+ num2
+       }
+
+    alert(sum(3,5))
+
+    add=sum;
+    alert(add(7,9))
+
+
+      let sumofthree =  function (num1,num2, num3 ,sumoftwo){
+        let sum1 = sumoftwo(num1,num2)
+        return sumoftwo(sum1, num3)
+                    }
+           
+       console.log(sumofthree(4,6,7, sum))
+   console.log (typeof sumofthree)
+   </script>
+
+
+</body>
+</html>

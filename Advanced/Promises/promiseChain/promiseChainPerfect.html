@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+        let funct = (id)=>{
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>{
+              console.log("data", id)
+              resolve("success")
+            }, 2000)
+        })
+     }
+   
+funct(6)
+  .then((e)=>{
+    return funct(8)
+  })
+    .then (()=>{
+      return funct(4)
+    })
+      .then(()=>{
+        return funct(9)
+      })
+        .then(()=>{
+          return funct(10)
+        })
+          .then(()=>{
+            return funct(3)    // 3 will in this case not print
+           })
+   
+  </script>
+  
+</body>
+</html>

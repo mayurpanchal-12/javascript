@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  
+  <div id="main">
+     <div id="div"></div>
+     <div id="div2"></div>
+   </div>
+   <a href="google.in" id="link">google</a>
+    <script>
+      //type, timestamp, defaultprevented, target, toElement, srcElement, current targetr
+      // clientx, y , ofset, screenx and y 
+      // alt key , ctrl key , shift key i have to learn this abot event function 
+      
+      
+      document.getElementById('main').addEventListener('click', (e) =>{
+        console.log("clicked inside main div")}
+            ,false);
+      document.querySelector('#div').addEventListener('click', (e)=>{
+        console.log("clicked inside the first div");
+              e.stopPropagation()}, false)
+
+      document.getElementById('link').addEventListener('click', (e)=>{
+            console.log("google click")
+              e.preventDefault()}, false);
+
+        // document.querySelector('#main').addEventListener
+        // ('click', function(e){console.log(e.target.parentNode)
+        //   let remove = e.target.parentNode;remove.remove()
+        // }, false)
+    </script>
+
+</body>
+</html>

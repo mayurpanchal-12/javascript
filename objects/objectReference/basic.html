@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+           let num1 = 4;
+           let num2 = num1; /* in primitive it copies actual data ;once copied then relation is cut
+           if now i once change the value of num1 it doesn`t apply on num1 */
+             
+          console.log(num1 , num2);
+          console.log(num1==num2);
+          num1=5;
+          console.log(num1,num2) ;// ans will be 5,4;
+          /* this is not worked as it in abjects */
+            console.log(num1==num2)
+  </script>
+</body>
+</html>

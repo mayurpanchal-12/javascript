@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <style>
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
+    }
+    #b1,#b2,#b3{
+      height: 20vh;
+      width: 29vw;
+      margin: 10px;
+      border: 2px ridge #4afdb2;
+      border-radius: 3px;
+      transition-property: all;
+      transition-duration: 5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0ms;
+      background-color: tomato;
+    }
+  #b3:hover{
+      height: 30vh;
+      
+    }
+    #b2:hover{
+      height: 30vh;
+    }
+    #b1:hover{
+      height: 30vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    bat ball stump game
+  </header>
+  <main>
+    <button id="b1" onclick="
+    let o = code()
+    let g = winner(o,`bat`)
+    //i can direct use winnerfunction in  alert_ instid ofUsingVaraible_g
+   alert_(o, g,memory)
+">bat</button>
+
+    <button id="b2" onclick="
+      let p = code();
+       alert_(p, winner(p,`ball`), memory) "> ball</button>
+
+    <button id="b3" onclick="
+    let r = code();
+    alert_(r,winner(r, `stump`), memory);
+
+    "> stump</button>
+  </main> 
+
+ <script>
+function code(){
+
+    let randomnumber =Math.random()*3;
+     
+      if(randomnumber >0 && randomnumber<=1)
+      {
+       return  `bat`;
+      }else if(randomnumber > 1 && randomnumber<=2)
+      {
+        return  `ball`
+
+      } else
+      {
+         return `stump`;
+      }  
+}
+           function winner(computerchoice , usechoice) {
+
+            if (computerchoice === `bat`) {
+                    if(usechoice === `ball`){
+                      memory.loss++; //loss user
+                    return`user choose ball \n bat is winner; user loss `;
+
+                     }else if(usechoice === `stump`){
+                         memory.win++; //win user
+                         return`user choose stump\n stump is winner; user win`
+
+                             }else{
+                               memory.tie++;
+                               return` it's tie`
+
+                                }
+            }else if (computerchoice === `ball`) {
+                            if(usechoice ===`bat`){
+                             memory.win++; //user win
+                             return `user choose bat  \n bat is winner ; user win`;
+
+                             }else if (usechoice === `ball`){
+                               memory.tie++;
+                               return`tie`;
+
+                         }else{
+                          memory.loss ++; 
+                            return `user choose stump  \n ball winn ; user loss`
+                            //user loss
+                                  }
+            } else if (computerchoice===`stump`){
+                      if(usechoice=== `bat`){
+                      memory.loss++;
+                       return `user choose bat \n stump is winner ; use loss `;
+                               
+                            }else if (usechoice === `ball`){
+                            memory.win++;
+                           return `user choose ball \n stump is loser ;user win `;
+                              }else{
+                                 memory.tie++;
+                                return  `it's tie`;
+
+                                } 
+              } 
+          }
+          
+          function alert_(computerchoice , winner){
+
+               alert(`computer choose ${computerchoice}\n ${winner}\n 
+               ${memory.displayscore()}`)
+
+          }
+           
+    let memory = {
+         win: 0,
+         loss:0,
+         tie:0,
+    displayscore: function () {
+      return `user win=${memory.win}
+               \n user loss= ${memory.loss}\n tie= ${memory.tie}`
+    }
+
+
+    };
+
+  </script>
+</body>
+</html>

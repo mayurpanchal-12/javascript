@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<button onclick="let y = com(); let x = winner(y, `bat`)
+     h.innerText= `${x}`
+">bat</button>
+<button onclick="let yu = com(); let xu = winner(yu, `bat`)
+     h.innerText= `${xu}` " 
+  >ball</button>
+  <button onclick="
+   let m = com(); let r = winner(m, `stump`); h.innerText = `${r}`
+  ">stump</button>
+  <button>reset</button>
+<h1></h1>
+
+  <script>
+    let h = document.querySelector(`h1`)
+    let computerChoice;
+      function com()  {
+        let random = Math.random()*3;
+        if (random>=0 && random <=1 ){
+          return computerChoice= "bat"
+
+        }else if (random>1 && random<= 2) {
+          return computerChoice = 'ball'
+        }else{
+       return    computerChoice = 'stump'
+        }
+
+      }
+      function  winner( computerChoice , userchoice) {
+         if(computerChoice === userchoice ){
+          return 'its tie'
+         }else if (computerChoice === 'bat') {
+               if (userchoice === 'ball') {
+                return 'user loss'
+               }else{
+                return ' user win '
+               }
+         } else if (computerChoice === 'ball') {
+          if (userchoice === 'bat') {
+            return 'user win '
+          }else  {
+            return ' user loss'
+          }
+         }else{
+                if (userchoice === 'bat') {
+                  return 'user loss'
+                }else{
+                  return 'user win '
+                }
+
+
+         }
+
+
+
+      }
+
+
+  </script>
+</body>
+</html>

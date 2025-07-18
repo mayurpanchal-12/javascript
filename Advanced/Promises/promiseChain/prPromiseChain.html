@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     let pr =id=>{
+          return new Promise((resolve, reject) => {
+              setTimeout(()=>{
+                console.log("data", id);
+                resolve("sucess")
+              }, 3000)
+          })
+         }
+
+    pr(4)
+     .then(()=>{
+        return pr(6)
+     })
+     .then(()=>{
+      return pr(9)
+     })
+     .then(()=>{
+
+     })
+
+//  callback hell
+    // function a(id , next){
+    //      setTimeout(()=>{
+    //       console.log("data", id);
+    //       if (next) {
+    //         next()
+    //       }
+    //      }, 3000)
+    // }
+
+    // a(3, ()=>{
+    //   a(8, ()=>{
+    //     a(7)
+    //   })
+    // })
+
+  </script>
+  
+</body>
+</html>

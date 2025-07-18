@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cricket</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <link rel="stylesheet" href="j.css">
+</head>
+<body>
+  <header>
+    bat ball stump game
+  </header>
+  <main>
+  <div class=" butt">
+    <button id="b1" onclick="
+    let o = code() ;let g = winner(o,`bat`) ;  alert_(o, g,memory)
+    ">
+        <img src="bat-image.jpg" class="image">  
+  </button>
+
+    <button id="b2" onclick="
+      let p = code(); alert_(p, winner(p,`ball`), memory) "
+      > 
+        <img src="ball_image.jpg" class="image">
+  </button>
+
+    <button id="b3" onclick="
+    let r = code();
+    alert_(r,winner(r, `stump`), memory);
+    "> 
+     <img src="stump_image.jpg" class="image">  
+  </button>
+
+    <button id="b4" onclick="localStorage.clear();
+                reset(); alert_()
+      ">
+      <img src="reset_image.jpg" class="image">  
+    </button>
+  </div>
+            <div>
+           <h1></h1>
+           <h2></h2>
+           <h3></h3>
+            </div>
+  </main> 
+
+ <script>
+
+let str = localStorage.getItem('score');
+let memory;
+reset(str);
+function reset(str ){  
+         memory= str? JSON.parse(str):  {  //if str is undefined means zero then it take below abj
+         win: 0,
+         loss:0,
+         tie:0,
+    };
+  
+memory.displayscore = function(){
+return `user win=${memory.win}\n user loss= ${memory.loss}\n tie= ${memory.tie}`;
+};
+                  }
+  
+
+         function code(){
+
+              let randomnumber =Math.random()*3;
+     
+                   if(randomnumber >0 && randomnumber<=1){
+                        return  `bat`;
+                         }else if(randomnumber > 1 && randomnumber<=2){
+                          return  `ball`
+                        } else {
+                         return `stump`;
+                              }  
+                        }
+
+
+ function winner(computerchoice , usechoice) {
+
+  if (computerchoice === `bat`) {
+     if(usechoice === `ball`){
+          memory.loss++; //loss user
+            return`user choose ball \n bat is winner; user loss `;
+                     }else if(usechoice === `stump`){
+                         memory.win++; //win user
+                         return`user choose stump\n stump is winner; user win`
+                             }else{
+                               memory.tie++;
+                               return` it's tie`
+                                }
+     }else if (computerchoice === `ball`) {
+                            if(usechoice ===`bat`){
+                             memory.win++; //user win
+                             return `user choose bat  \n bat is winner ; user win`;
+                             }else if (usechoice === `ball`){
+                               memory.tie++;
+                               return`tie`;
+                         }else{
+                          memory.loss ++; 
+                            return `user choose stump  \n ball winn ; user loss`
+                                  }
+      } else if (computerchoice===`stump`){
+                       if(usechoice=== `bat`){
+                          memory.loss++;
+                       return `user choose bat \n stump is winner ; use loss `;
+                                 }else if (usechoice === `ball`){
+                            memory.win++;
+                           return `user choose ball \n stump is loser ;user win `;
+                              }else{
+                                 memory.tie++;
+                                return  `it's tie`;
+                                } 
+       } 
+          }
+          
+             function alert_(computerchoice , winner){
+                localStorage.setItem('score', JSON.stringify(memory));
+           document.querySelector(`h1`).innerText=
+           computerchoice?
+                ` computer choose ${computerchoice}`:'' ;
+          document.querySelector(`h2`).innerText=
+          winner?
+               `${winner}` : '';
+          document.querySelector(`h3`).innerText=
+          // winner? if i use this the all will be delete after reset
+                     `${memory.displayscore()}`;
+          }
+ 
+  </script>
+</body>
+</html>

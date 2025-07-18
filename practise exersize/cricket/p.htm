@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="p.css">
+</head>
+<body>
+  <div id="body">
+  <button onclick="
+    let random = Math.random()*3;
+    let computer;
+    if(random >=0 && random<=1){
+      computer = `bat`;
+    } else if (random>1 && random <=2) {
+      computer = `ball`;
+    }else if (random>2 && random<=3) {
+       computer = `stump`;
+    }
+    let result ;
+    if (computer==`ball`) {
+      result = `bat winnes`
+    }else if (computer == `stump`) {
+      result = `com winnes`
+    }else{
+      result = `tie`
+    }
+    document.querySelector(`#h1`).innerText =  ` your choice bat \n ${computer} this is choosen by com \n ${result}  \t random number is ${random}`
+    ">bat</button>
+
+
+  <button onclick="
+      let  randomnumb = Math.random()*3;
+      let com;
+      let re;
+    if(randomnumb >=0 && randomnumb<=1){
+           com = `bat`;
+      re = `batwins`
+
+    }else if (randomnumb>1 && randomnumb<=2) {
+      com = `ball`
+      re = `tie`
+
+    }else{
+      com = `stump`
+      re = `ballwins`
+
+    }
+   document.querySelector(`#h1`).innerText = ` you choice ball \n com choose ${com} \n ${re} \t ${randomnumb}`
+  ">ball</button>
+  
+  <button onclick="
+  let r = Math.random()*3;
+  let co ;
+  let ra;
+  if (r>=0 && r <=1) {
+    co =`bat`
+    ra = `stumpwinnes`
+    } else if (r >1 && r<=2) {
+      co = `ball`
+      ra = `stumploose`
+    }else{
+      com = `stump`
+      ra = `tie`
+    }
+    document.querySelector(`#h1`).innerText = `you choose stumps\n com choose ${co} \n ${ra} \t ${r} `
+  "
+  >stump</button>
+  </div>
+  <h1 id="h1"></h1>
+</body>
+</html>

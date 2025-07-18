@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="C:\Users\Welcome\Desktop\js\head.css">
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;}
+      .body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      border: 5px  black ridge;
+      border-radius: 5px;
+      width: 150px;
+    }
+    .cal{
+      
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: palegreen;
+      /* height: 50vh; */
+
+    }
+    #input{
+      text-align: center;
+      width: 90%;
+      background-color: palevioletred;
+      /* margin: 10px; */
+    }
+    .button{
+      margin: 9px;
+      width: 32px;
+      background-color: palevioletred;
+    }
+  </style>
+</head>
+<body>
+  <header style="margin-bottom: 100px;">calculator</header>
+  <div class="body">
+
+  <input type="text" id="input" readonly>
+
+  <div class="cal">
+  <button class="button" onclick="
+  a = ``;document.querySelector(`#input`).value = a;">c</button>
+  <button class="button"
+  onclick="
+  a=a+`1`; document.querySelector(`#input`).value=a; ">1</button>
+  <button class="button" onclick="
+  a=a+`2`; document.querySelector(`#input`).value=a;">2</button>
+  <button class="button" onclick="
+  a = a+`+`;document.querySelector(`#input`).value = a;">+</button>
+  <button class="button" onclick="
+  a=a+`3`; document.querySelector(`#input`).value=a;">3</button>
+  <button class="button" onclick="
+  a=a+`4`; document.querySelector(`#input`).value=a;">4</button>
+  <button class="button" onclick="
+  a = a+`-`;document.querySelector(`#input`).value=a;">-</button>
+  <button class="button" onclick="
+  a=a+`5`; document.querySelector(`#input`).value=a;">5</button>
+  <button class="button" onclick="
+  a=a+`6`; document.querySelector(`#input`).value=a;">6</button>
+  <button class="button" onclick="
+  a=a+`*`; document.querySelector(`#input`).value=a;">*</button>
+  <button class="button" onclick="
+  a=a+`7`; document.querySelector(`#input`).value=a;">7</button>
+  <button class="button" onclick="
+  a=a+`8`; document.querySelector(`#input`).value=a;">8</button>
+  <button class="button" onclick="
+  a=a+`/`; document.querySelector(`#input`).value=a;">/</button>
+  <button class="button" onclick="
+  a=eval(a); document.querySelector(`#input`).value=a;">=</button>
+  <button class="button" onclick="
+  a=a+`9`; document.querySelector(`#input`).value=a;">9</button>
+  <button class="button" onclick="
+  a=a+`0`; document.querySelector(`#input`).value=a;">0</button>
+  <button class="button" onclick="
+  a=a+`.`; document.querySelector(`#input`).value=a;">.</button>
+  
+</div>
+  </div>
+   <script>
+    let a =``;
+   </script>
+</body>
+</html>

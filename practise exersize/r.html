@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="a++;
+  document.querySelector(`#C`).innerText = `your bag has ${a} items`">add to bag</button>
+
+  
+  <button onclick=" a--;
+  document.querySelector(`h1`).innerText= `your cart has ${a}items`">move to wishlist</button>
+
+  <button onclick=" a+=2;
+  document.querySelector(`h1`).innerText= `your items has ${a} item`">1+1sell items</button>
+  <h1 id="C"> </h1>
+  <script>
+    let a = 0;
+  </script>
+</body>
+</html>

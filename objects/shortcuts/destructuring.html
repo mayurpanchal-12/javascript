@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let product={
+      price:100,
+      name:'shirt',
+      size:34,
+    }
+    console.log(product)
+    let a = product.price;
+    let b = product.name;
+    let c = product.size;
+    console.log(`this is by using one method ${a},${b}, ${c} `)// this is first method
+
+    // let {price}= product;
+    // let {name}= product;
+    // let {size} = product;
+    // console.log(`this is by using second method ${price} ,${name} , ${size}`);
+    let {name, price} =product /* to use this i comment out abobe
+                       otherwise above is also right */
+              console.log(name,price)
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+   //array alos take /use references like object
+   
+let a = [2,3,4,'k ', null];
+          let r = a;
+console.log(r);
+          r.push(7);
+console.log(a); //change in one always reflect in other same as object
+          let x = [1,2,3];
+          let y =[1,2,3];
+console.log(x==y);//false 
+console.log(x===y);// references are diffrent so false
+console.log(a===r);// true
+console.log(a==r); // check , takes references wich are same , true 
+</script>  
+</body>
+</html>
