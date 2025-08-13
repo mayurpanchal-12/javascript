@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let inform = function () {
+      let a = "good";
+      return a;
+    }
+
+    let anotherfn = inform;
+    console.log(anotherfn()); // prints "good"
+    //anotherfn is a reference to inform function
+    //both point to the same function in memory
+    console.log(inform === anotherfn); // true, they are the same function
+    console.log(inform()); // prints "good"
+    console.log(anotherfn()); // prints "good"
+    //both functions return the same value
+    //they are interchangeable
+    //these are anonymous functions
+    //they are not named, but can be assigned to variables
+    //they can be passed as arguments to other functions
+  
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = [3, 6 , 9];
+    console.log(typeof a);
+    a.push(2);
+    a.push(8);
+    a.push(13);
+    a.pop();
+    console.log(a)
+    console.log(a);
+    a.unshift(2);
+    a.unshift(1);
+    console.log(a);
+    a.shift();
+    a.shift();
+    console.log(a);
+
+    let r = a.splice(2, 2);
+    console.log(r)
+let str = a.toString();
+console.log(str);
+let vo = a.valueOf();
+console.log(vo);
+let f = a.slice(0,2);
+console.log(f);
+console.log(a)
+</script>
+  
+</body>
+</html>

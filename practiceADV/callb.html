@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //      function a (id , nextid){
+      //        setInterval (()=>{
+      //           console.log(id)
+      //           nextid()
+      //        }, 3000)
+      //      };
+
+      // a(3 , ()=>{
+      //   a(6, ()=>{
+      //     a(9)
+      //   })
+      // } )
+
+      /**
+  function b(id, nextid){
+      setTimeout(()=>{
+        console.log(id);
+        if(nextid){
+          nextid()
+        }
+      }, 3000)
+  };
+
+  b(5, ()=>{
+    b(6 , ()=>{
+      b(8 , ()=>{
+        b(10)
+      })
+    })
+  })
+**/
+
+      /**
+new Promise((resolve, reject)=>{
+     let err = false;
+     if(err ==true){
+    console.log(err);
+    resolve()
+     }else{
+       reject("error is false")
+    }
+}) .then(()=>{
+
+}).catch((e)=>{
+ console.log(e)
+}).finally(()=>{
+  console.log("worked")
+})
+  **/
+      /**
+  function a(id){
+       return new Promise((resolve, reject)=>{
+          setTimeout(()=>{
+            console.log(id);
+            resolve();
+          }, 3000)
+       })
+  };
+
+    a(9)
+       .then(()=>{
+        return a(6)
+       }).then(()=>{
+        return a(3)
+       }).then(()=>{})
+       .finally(()=>{
+        console.log("done")
+       })
+        **/
+
+      let fn = (id) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log(id);
+            resolve();
+          }, 3000);
+        });
+      };
+
+      (async () => {
+        await fn(3);
+        await fn(7);
+        await fn(10);
+      })();
+
+      // let name =num=> num*num;
+      // alert(name(9))
+
+      let arr = [3, 6, 8, 2];
+      arr.forEach((num) => {
+        alert(num);
+      });
+  
+  let arfn = ()=>{
+      let newarr = arr.filter((num) => {
+        if (num > 3) {
+          alert(num)
+                    return true;
+
+        } else {
+          return false;
+        }
+      });
+    };
+
+  let arra = [ 4, 5, 8, 10];
+  let mapped = arra.map((num)=>{
+    return num+2
+  });
+  alert(mapped)
+
+
+
+      // alert(newarr);
+
+    </script>
+  </body>
+</html>

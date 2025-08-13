@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+/**  let a =  function(data, next){
+     setTimeout(()=>{
+      console.log(data, " is data ")
+      if(next){
+        next()
+      }
+     } ,3000);
+  }
+
+  a(3, ()=>{
+    a(6, ()=>{
+      a(9, ()=>{
+        a(12)
+      })
+    })
+  })
+  **/
+
+// promise chain
+ 
+ /**   let pc = (id)=>{
+       return new Promise ((resolve , reject)=>{
+        setTimeout(()=>{
+         console.log(id , "is the id")
+          resolve("success")
+        }, 3000)
+       })
+    };
+pc(3)
+  .then(()=>{
+     return pc(6)
+  }).then(()=>{
+    return pc(9)
+  }).then(()=>{
+    
+  })
+  **/
+ // again pchain
+
+ let fn = (id)=>{
+   return new Promise((resolve , reject)=>{
+      setTimeout(()=>{
+        console.log("this is id ", id);
+        resolve()
+      }, 3000)
+   })
+ }
+ 
+  fn(2)
+    .then(()=>{
+         return fn(6)
+    }).then(()=>{
+      return fn(10)
+    }).then(()=>{
+      
+    })
+
+
+  </script>
+</body>
+</html>

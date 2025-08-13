@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main{background-color: red; height: 70vh; width: 100vw;
+    display: flex; justify-content: center; align-items: center;}
+    #one{background-color: greenyellow; height: 25vh; width: 30vw; margin: 10px;}
+    #two{background-color: aqua; height: 25vh; width: 30vw;}
+    
+  </style>
+</head>
+<body>
+  <div id="main">
+     <div id="one"></div>
+     <div id="two"></div>
+  </div>
+  <a href="qgsjq">sgqks</a>
+  <input type="text">
+  <script>
+let one = document.getElementById('one');
+let two = document.getElementById('two');
+let main = document.getElementById('main');
+
+     one.addEventListener('click', (e)=>{
+        console.log("one")
+     },true);
+     two.addEventListener('click', (e)=>{
+        console.log("two")
+     },true);
+     main.addEventListener('click', (e)=>{
+        console.log("main")
+     },true);
+     document.querySelector('a').addEventListener('click', (e)=>{
+      console.log("link press"); e.preventDefault()
+     });
+     document.querySelector('input').addEventListener('keydown', (e)=>{
+      console.log(e.key, e.keyCode, e.code)
+     })
+  </script>
+</body>
+</html>

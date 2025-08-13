@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = [ 1 , 2,3,  4, , 10 ]
+    console.log(a)
+    a.push(5)
+    console.log(a)
+    a.push(8);
+    console.log(a);
+    a.pop();
+    a.pop();
+    a.shift();
+    console.log(a);
+    a.shift() ;
+    console.log(a);
+    a.unshift(100);
+    console.log(a);
+    a.unshift(101);
+    console.log(a);
+    
+    let b = a;
+    let c = b.slice(2,4)
+    console.log(c);
+
+    b.splice(3, 4)
+    
+    console.log(b)
+    console.log(b.toString());
+    console.log(b.sort());
+    let r = b.valueOf();
+    console.log(r);
+  </script>
+</body>
+</html>

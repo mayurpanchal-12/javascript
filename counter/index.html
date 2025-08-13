@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> my counter</h2>
+   <div id="value"></div>
+    <button id="add">add</button>
+    <button id="del">delete</button>
+  <script>
+    let value = 0;
+      let val = document.getElementById('value');
+      val.innerText = `counter value is ${value}`;
+      document.getElementById('add').addEventListener('click', ()=>{
+        value= value+1;
+        val.innerText = `counter value is ${value}`;
+      });
+     let del =  document.getElementById('del')
+       del.addEventListener('click', ()=>{
+        value = value-1;
+        val.innerText = `counter value is ${value}`;
+       })
+
+  </script>
+</body>
+</html>

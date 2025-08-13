@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let a ={
+    name:" mayur",
+    age: 23,
+   };
+   let b = JSON.stringify(a);
+   console.log(b);
+   let c = JSON.parse(b);
+   console.log(c)
+localStorage.setItem('names', b)
+
+ let z ={
+    name:" mayur",
+    age: 20,
+   };
+
+   localStorage.setItem('z', JSON.stringify(z));
+   let r = localStorage.getItem(z);
+   console.log(z);
+   localStorage.removeItem('z');
+   localStorage.removeItem('names');
+   localStorage.clear();
+
+   let g = new Date();
+
+   console.log(g.getDate());
+   console.log(g.getTime());
+   console.log(g.getFullYear())
+
+</script>
+  
+</body>
+</html>

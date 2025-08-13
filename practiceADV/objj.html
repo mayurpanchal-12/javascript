@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let add= "hello"
+
+    let product = {
+      name: "shirt",
+      price: 200,
+      rating: {
+        number: 200,
+        star: 4,
+      },
+      'a-4': "prac",
+      msag(){
+        console.log('prize is ....k')
+      },
+      add,
+    };
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product[`rating`]);
+    delete product[`a-4`];
+    console.log(product);
+    product.size= 34;
+    console.log(product);
+
+    let s= product.size;
+    console.log(s);
+    let {price} = product;
+    console.log(price);
+    console.log(product);
+    npro = product;
+    npro.name = "polo";
+    console.log(product);
+    console.log("gki".toLocaleLowerCase());
+    
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let add = "hello";
+ let product = {
+      prize: 300,
+      size: 34,
+      name:"shirt",
+      rating: {
+        num: 200,
+        rating:4
+      },
+      'a-r': "random",
+    me(){
+        message:"fn"
+      },
+      add,
+
+ };
+
+ console.log(product);
+ console.log(typeof product);
+console.log(product.name);
+console.log(product.size);
+console.log(product[`name`])
+
+product.aa = 22;
+console.log(product);
+delete product.aa;
+console.log(product.rating);
+product.rating.company = "polo";
+console.log(product)
+console.log(product[`a-r`])
+
+let ref = product
+console.log("using reference:-\t", ref);
+ref.name= "tshirt";
+ref.prize=350;
+product.company= "nissan";
+console.log(ref)
+let name = product.size;
+console.log(name);
+let {prize} = product
+console.log(prize);
+console.log(ref)
+  </script>
+  
+</body>
+</html>
