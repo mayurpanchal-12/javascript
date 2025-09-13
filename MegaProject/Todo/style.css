@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+/* Heading */
+#heading {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+  text-transform: capitalize;
+  text-decoration: overline;
+  text-decoration-color: #e6e664;
+}
+
+/* Input grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 100px;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#text, #date {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Add button */
+.add {
+  background-color: #1de371;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.add:hover {
+  background-color: #16c45c;
+}
+
+/* Todo container */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Each todo row */
+.todo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+.todo-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.todo-row span {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+/* Completed todo text */
+.completed-text {
+  text-decoration: line-through;
+  color: #777;
+  opacity: 0.7;
+}
+
+/* Buttons inside todo row */
+.todo-row button {
+  margin-left: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+/* Complete/Uncomplete button */
+.complete {
+  background-color: #1d87ba;
+  color: white;
+}
+.complete:hover {
+  background-color: #16688f;
+}
+
+/* Edit button */
+.edit {
+  background-color: #f0ad4e;
+  color: white;
+}
+.edit:hover {
+  background-color: #d48f3a;
+}
+
+/* Delete button */
+.delete {
+  background-color: #ba1d1d;
+  color: white;
+}
+.delete:hover {
+  background-color: #a31717;
+}
